@@ -1,34 +1,34 @@
-'use client';
-import { useSearchParams } from 'next/navigation';
+"use client";
+import { useSearchParams } from "next/navigation";
 
 export default function SearchPage() {
   const searchParams = useSearchParams();
-  const query = searchParams.get('query') || '';
+  const query = searchParams.get("query") || "";
 
-  // هنا نضع قائمة المحتوى الذي تريد البحث فيه
+  // قائمة المحتوى
   const content = [
-    { title: 'الرئيسية', slug: '/' },
-    { title: 'الوكاله', slug: '/about' },
-    { title: 'الأخبار', slug: '/news' },
-    { title: 'خارطة الطريق', slug: '/news' },
-    { title: 'المشاريع', slug: '/news' },
-    { title: 'الفعاليات', slug: '/news' },
-    { title: 'التوظيف', slug: '/news' },
-    { title: 'عن الوكالة', slug: '/news' },
-    { title: 'اتصل بنا', slug: '/news' },
-    // أضف باقي الروابط أو محتوى الموقع
+    { title: "الرئيسية", slug: "/" },
+    { title: "الوكاله", slug: "/about" },
+    { title: "الأخبار", slug: "/news" },
+    { title: "خارطة الطريق", slug: "/roadmap" },
+    { title: "المشاريع", slug: "/projects" },
+    { title: "الفعاليات", slug: "/events" },
+    { title: "التوظيف", slug: "/recrutement" },
+    { title: "عن الوكالة", slug: "/about" },
+    { title: "اتصل بنا", slug: "/contact" },
   ];
 
-  const results = content.filter(item =>
-    item.title.includes(query)
+  // فلترة النتائج
+  const results = content.filter((item) =>
+    item.title.includes(query.trim())
   );
 
   return (
-    <div style={{ padding: '2rem' }}>
+    <div style={{ padding: "2rem" }}>
       <h1>نتائج البحث عن: "{query}"</h1>
       {results.length > 0 ? (
         <ul>
-          {results.map(item => (
+          {results.map((item) => (
             <li key={item.slug}>
               <a href={item.slug}>{item.title}</a>
             </li>

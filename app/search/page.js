@@ -1,15 +1,20 @@
 // app/search/page.js
-export const metadata = { title: "البحث" };
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+'use client';
 
-import { Suspense } from "react";
-import SearchClient from "./SearchClient";
+import { useSearchParams } from 'next/navigation';
 
-export default function Page() {
+export default function SearchPage() {
+  const searchParams = useSearchParams();
+  const query = searchParams.get('q');
+
   return (
-    <Suspense fallback={<div style={{ padding: "2rem" }}>جار التحميل...</div>}>
-      <SearchClient />
-    </Suspense>
+    <div style={{ padding: '2rem' }}>
+      <h1>صفحة البحث</h1>
+      {query ? (
+        <p>نتائج البحث عن: <strong>{query}</strong></p>
+      ) : (
+        <p>أدخل استعلامًا في شريط البحث.</p>
+      )}
+    </div>
   );
 }

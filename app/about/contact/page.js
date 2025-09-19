@@ -1,12 +1,11 @@
-"use client";
+'use client';
 
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
-import "./contact.css"; // تأكد من استيراد هذا الملف
+import "./contact.css"; // تأكد من وجود هذا fichier dans le bon chemin
 
 export default function ContactPage() {
   return (
     <div className="contact-container">
-      
       {/* شريط العنوان */}
       <div className="contact-header">
         <h1>اتصل بنا</h1>

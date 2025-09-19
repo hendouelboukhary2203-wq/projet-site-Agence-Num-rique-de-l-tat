@@ -41,7 +41,7 @@ export default function SearchForm() {
         onChange={(e) => setValue(e.target.value)}
         style={{ padding: ".4rem .6rem", border: "1px solid #ddd", borderRadius: ".4rem" }}
       />
-      <button type="submit" style={{ padding: ".4rem .6rem" }}>🔍</button>
+      {/* <button type="submit" style={{ padding: ".4rem .6rem" }}>🔍</button> */}
     </form>
   );
 }

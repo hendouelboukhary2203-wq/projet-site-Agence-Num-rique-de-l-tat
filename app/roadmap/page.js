@@ -1,3 +1,4 @@
+'use client';
 import './roadmap.css';
 
 export default function ProjectsPage() {

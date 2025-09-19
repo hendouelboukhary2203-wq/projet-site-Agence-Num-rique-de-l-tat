@@ -1,4 +1,5 @@
 
+'use client';
  import './projects.css';
 
 export default function ProjectsPage() {

@@ -1,4 +1,6 @@
 // app/search/page.js
+'use client';
+
 import { Suspense } from "react";
 import SearchPage from "./SearchPage";
 

@@ -1,5 +1,5 @@
 import './globals.css';
-import SearchForm from './search/SearchForm';
+// import SearchForm from './search/SearchForm';
 import Link from 'next/link';
 import Image from 'next/image'; // ✅ استيراد مكوّن الصور
 
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           <Link href="/contact" style={{ marginRight: '1rem' }}>اتصل بنا</Link>
 
           {/* ✅ نموذج البحث */}
-          <SearchForm />
+          {/* <SearchForm /> */}
         </nav>
 
         <main style={{ minHeight: '80vh', padding: '2rem' }}>

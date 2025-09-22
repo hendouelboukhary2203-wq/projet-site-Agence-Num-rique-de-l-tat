@@ -3,10 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # ou remplace par ta branche principale
+      - main  # Replace with your default branch if it's not 'main'
 
 permissions:
-  contents: write
+  contents: write  # Needed for GH Pages deployment to push to the repository
 
 jobs:
   build-and-deploy:
@@ -20,15 +20,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # More reliable in CI than `npm install`
 
       - name: Build and Export Next.js App
-        run: npm run deploy  # => build + export
+        run: npm run deploy  # This should run `next build && next export`
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          publish_branch: gh-pages  # Optional: set to the branch you're deploying to

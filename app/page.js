@@ -211,7 +211,7 @@ export default function Home() {
         boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
       }}
     >
-      <img src="/.7.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+      <img src="./7.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
       <div style={{ padding: "1rem" }}>
         <h3 style={{ margin: "0 0 0.5rem 0" }}>شراكة مع وزارات الدولة</h3>
         <p style={{ margin: 0, color: "#555" }}>
@@ -230,7 +230,7 @@ export default function Home() {
         boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
       }}
     >
-      <img src="/.6.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+      <img src="./6.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
       <div style={{ padding: "1rem" }}>
         <h3 style={{ margin: "0 0 0.5rem 0" }}>إطلاق منصة حكومية جديدة</h3>
         <p style={{ margin: 0, color: "#555" }}>

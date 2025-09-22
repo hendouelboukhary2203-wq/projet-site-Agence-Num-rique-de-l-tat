@@ -117,7 +117,7 @@ export default function EventsPage() {
           text-align: center;
           margin-bottom: 2rem;
           font-size: 2rem;
-          background-color: #ffe6f0; /* شريط وردي فاتح */
+          background-color:#e6e6e6; /* شريط وردي فاتح */
           padding: 1rem;
           border-radius: 8px;
         }

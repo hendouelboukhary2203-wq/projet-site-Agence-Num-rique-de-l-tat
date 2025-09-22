@@ -12,7 +12,7 @@ export default function EventsPage() {
       date: "2024-03-15",
       description:
         "تم تنظيم فعالية إطلاق البوابة الوطنية التي تهدف إلى تسهيل الوصول إلى جميع الخدمات الحكومية الإلكترونية من خلال منصة موحدة ومتطورة.",
-      image: "/9.jpg",
+      image: "./9.jpg",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export default function EventsPage() {
       date: "2024-03-10",
       description:
         "نُظمت ورشة تدريبية شاملة لتطوير قدرات الموظفين في استخدام التقنيات الحديثة وأدوات التحول الرقمي.",
-      image: "/10.jpg",
+      image: "./10.jpg",
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ export default function EventsPage() {
       date: "2024-03-05",
       description:
         "تم توقيع اتفاقيات شراكة استراتيجية مع عدة جامعات وطنية لتطوير البرامج الأكاديمية المتخصصة في المجال الرقمي.",
-      image: "/11.jpg",
+      image: "./11.jpg",
     },
     {
       id: 4,
@@ -39,11 +39,11 @@ export default function EventsPage() {
       date: "2024-02-28",
       description:
         "تم تقديم مشروع الهوية الرقمية الموحدة الذي سيسهل على المواطنين الوصول لجميع الخدمات الحكومية برقم موحد.",
-      image: "/12.jpg",
+      image: "./12.jpg",
     },
   ];
 
-  const images = ["/17.jpg", "/16.jpg", "/13.jpg", "/14.jpg", "/15.jpg"];
+  const images = ["./17.jpg", "./16.jpg", "./13.jpg", "./14.jpg", "./15.jpg"];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -216,6 +216,7 @@ export default function EventsPage() {
             grid-template-columns: 1fr;
           }
         }
+          
       `}</style>
     </section>
   );

@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [currentImage, setCurrentImage] = useState("/1.jpg");
+  const [currentImage, setCurrentImage] = useState("./1.jpg");
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) =>
-        prevImage === "/2.jpg" ? "/1.jpg" : "/2.jpg"
+        prevImage === "./2.jpg" ? "./1.jpg" : "./2.jpg"
       );
     }, 3000);
 

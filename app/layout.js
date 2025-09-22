@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           {/* ✅ إضافة اللوغو */}
           <Link href="/" style={{ marginRight: '1rem', display: 'flex', alignItems: 'center' }}>
             <Image 
-              src="/4.jpg" // ضع اسم صورة اللوغو هنا
+              src="./4.jpg" // ضع اسم صورة اللوغو هنا
               alt="شعار الوكالة"
               width={40}   // تعدّل الحجم حسب الحاجة
               height={40}
@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
         {/* القسم 1: الشعار والنص */}
         <div style={{ flex: "1", minWidth: "200px", marginBottom: "1rem" }}>
           <Image 
-            src="/4.jpg" 
+            src="./4.jpg" 
             alt="Logo Agence Numérique" 
             width={45}  // تصغير اللوغو
             height={45} // تصغير اللوغو
@@ -105,6 +105,7 @@ export default function RootLayout({ children }) {
        ©️ {new Date().getFullYear()} الوكالة الرقمية
       </div>
     </footer>
+    
 
       </body>
     </html>

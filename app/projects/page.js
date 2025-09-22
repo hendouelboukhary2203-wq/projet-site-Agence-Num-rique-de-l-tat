@@ -132,6 +132,7 @@ export default function ProjectsPage() {
             <div className="project-footer">
               <p>بداية: {p.start}</p>
               <p>نهاية: {p.end}</p>
+              
             </div>
           </div>
         ))}

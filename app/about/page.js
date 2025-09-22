@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* صورة رئيسية مع عنوان ونص */}
       <section style={{ position: "relative", display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
         <Image 
-          src="/3.jpg" 
+          src="./3.jpg" 
           alt="صورة الوكالة" 
           width={900} 
           height={500} 

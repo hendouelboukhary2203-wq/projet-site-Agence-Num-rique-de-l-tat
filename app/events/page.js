@@ -89,13 +89,14 @@ export default function EventsPage() {
 
       {/* معرض الصور */}
       <div className="gallery">
-        <Image
-          src={images[current]}
-          alt="معرض الصور"
-          // width={100} 
-          height={500}
-          style={{ borderRadius: "10px", objectFit: "cover" ,width : "100% !important"}}
-        />
+<div style={{ position: "relative", width: "100%", height: "500px", overflow: "hidden", borderRadius: "10px" }}>
+  <Image
+    src={images[current]}
+    alt="معرض الصور"
+    fill
+    style={{ objectFit: "cover", borderRadius: "10px" }}
+  />
+</div>
         <div className="dots">
           {images.map((_, i) => (
             <span

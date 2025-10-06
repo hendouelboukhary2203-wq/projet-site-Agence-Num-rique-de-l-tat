@@ -143,6 +143,7 @@ export default function EventsPage({ params }) {
 
       {/* معرض الصور */}
       <div className="gallery">
+<<<<<<< HEAD:app/[lang]/events/page.js
         <Image
           src={images[current]}
           alt="معرض الصور"
@@ -150,6 +151,16 @@ export default function EventsPage({ params }) {
           height={500}
           style={{ borderRadius: "10px", objectFit: "cover" }}
         />
+=======
+<div style={{ position: "relative", width: "100%", height: "500px", overflow: "hidden", borderRadius: "10px" }}>
+  <Image
+    src={images[current]}
+    alt="معرض الصور"
+    fill
+    style={{ objectFit: "cover", borderRadius: "10px" }}
+  />
+</div>
+>>>>>>> 235cf2239c62ceedd4f8f6479d12bcd0d7924e79:app/events/page.js
         <div className="dots">
           {images.map((_, i) => (
             <span
@@ -170,7 +181,11 @@ export default function EventsPage({ params }) {
           text-align: center;
           margin-bottom: 2rem;
           font-size: 2rem;
+<<<<<<< HEAD:app/[lang]/events/page.js
           background-color: #f2f2f2; /* ✅ رمادي فاتح */
+=======
+          background-color:#e6e6e6; /* شريط وردي فاتح */
+>>>>>>> 235cf2239c62ceedd4f8f6479d12bcd0d7924e79:app/events/page.js
           padding: 1rem;
           border-radius: 8px;
         }

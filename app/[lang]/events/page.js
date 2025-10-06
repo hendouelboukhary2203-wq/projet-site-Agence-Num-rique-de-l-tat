@@ -1,47 +1,101 @@
 "use client";
+import { use } from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function EventsPage() {
-  const events = [
-    {
-      id: 1,
-      title: "فعالية إطلاق البوابة الوطنية",
-      category: "إطلاق",
-      date: "2024-03-15",
-      description:
-        "تم تنظيم فعالية إطلاق البوابة الوطنية التي تهدف إلى تسهيل الوصول إلى جميع الخدمات الحكومية الإلكترونية من خلال منصة موحدة ومتطورة.",
-      image: "./9.jpg",
-    },
-    {
-      id: 2,
-      title: "ورشة تدريبية حول التحول الرقمي",
-      category: "تدريب",
-      date: "2024-03-10",
-      description:
-        "نُظمت ورشة تدريبية شاملة لتطوير قدرات الموظفين في استخدام التقنيات الحديثة وأدوات التحول الرقمي.",
-      image: "./10.jpg",
-    },
-    {
-      id: 3,
-      title: "شراكة مع الجامعات لتطوير الكفاءات الرقمية",
-      category: "شراكات",
-      date: "2024-03-05",
-      description:
-        "تم توقيع اتفاقيات شراكة استراتيجية مع عدة جامعات وطنية لتطوير البرامج الأكاديمية المتخصصة في المجال الرقمي.",
-      image: "./11.jpg",
-    },
-    {
-      id: 4,
-      title: "فعالية عرض مشروع الهوية الرقمية",
-      category: "مشاريع",
-      date: "2024-02-28",
-      description:
-        "تم تقديم مشروع الهوية الرقمية الموحدة الذي سيسهل على المواطنين الوصول لجميع الخدمات الحكومية برقم موحد.",
-      image: "./12.jpg",
-    },
-  ];
+// الترجمة
+const translations = {
+  ar: {
+    title: "فعاليات الوكالة",
+    btnDetails: "عرض التفاصيل",
+    events: [
+      {
+        id: 1,
+        title: "فعالية إطلاق البوابة الوطنية",
+        category: "إطلاق",
+        date: "2024-03-15",
+        description:
+          "تم تنظيم فعالية إطلاق البوابة الوطنية التي تهدف إلى تسهيل الوصول إلى جميع الخدمات الحكومية الإلكترونية من خلال منصة موحدة ومتطورة.",
+        image: "./9.jpg",
+      },
+      {
+        id: 2,
+        title: "ورشة تدريبية حول التحول الرقمي",
+        category: "تدريب",
+        date: "2024-03-10",
+        description:
+          "نُظمت ورشة تدريبية شاملة لتطوير قدرات الموظفين في استخدام التقنيات الحديثة وأدوات التحول الرقمي.",
+        image: "./10.jpg",
+      },
+      {
+        id: 3,
+        title: "شراكة مع الجامعات لتطوير الكفاءات الرقمية",
+        category: "شراكات",
+        date: "2024-03-05",
+        description:
+          "تم توقيع اتفاقيات شراكة استراتيجية مع عدة جامعات وطنية لتطوير البرامج الأكاديمية المتخصصة في المجال الرقمي.",
+        image: "./11.jpg",
+      },
+      {
+        id: 4,
+        title: "فعالية عرض مشروع الهوية الرقمية",
+        category: "مشاريع",
+        date: "2024-02-28",
+        description:
+          "تم تقديم مشروع الهوية الرقمية الموحدة الذي سيسهل على المواطنين الوصول لجميع الخدمات الحكومية برقم موحد.",
+        image: "./12.jpg",
+      },
+    ],
+  },
+  fr: {
+    title: "Événements de l’agence",
+    btnDetails: "Voir les détails",
+    events: [
+      {
+        id: 1,
+        title: "Lancement du Portail National",
+        category: "Lancement",
+        date: "2024-03-15",
+        description:
+          "Événement de lancement du portail national visant à faciliter l’accès à tous les services publics numériques via une plateforme unifiée et moderne.",
+        image: "/9.jpg",
+      },
+      {
+        id: 2,
+        title: "Atelier de formation sur la transformation numérique",
+        category: "Formation",
+        date: "2024-03-10",
+        description:
+          "Un atelier de formation complet a été organisé pour développer les compétences des employés dans l’utilisation des technologies modernes.",
+        image: "/10.jpg",
+      },
+      {
+        id: 3,
+        title: "Partenariat avec les universités pour développer les compétences numériques",
+        category: "Partenariats",
+        date: "2024-03-05",
+        description:
+          "Des accords stratégiques ont été signés avec plusieurs universités nationales pour développer des programmes académiques spécialisés dans le domaine numérique.",
+        image: "/11.jpg",
+      },
+      {
+        id: 4,
+        title: "Présentation du projet d'identité numérique",
+        category: "Projets",
+        date: "2024-02-28",
+        description:
+          "Présentation du projet d’identité numérique unifiée qui facilitera l’accès des citoyens à tous les services publics avec un identifiant unique.",
+        image: "/12.jpg",
+      },
+    ],
+  },
+};
+
+export default function EventsPage({ params }) {
+  const {lang} = use(params) ;
+  const currentLang=lang|| "ar" ;
+  const t = translations[currentLang];
 
   const images = ["./17.jpg", "./16.jpg", "./13.jpg", "./14.jpg", "./15.jpg"];
   const [current, setCurrent] = useState(0);
@@ -55,11 +109,11 @@ export default function EventsPage() {
 
   return (
     <section className="events">
-      <h1>فعاليات الوكالة</h1>
+      <h1>{t.title}</h1>
 
       {/* شبكة البطاقات */}
       <div className="grid">
-        {events.map((e) => (
+        {t.events.map((e) => (
           <article className="card" key={e.id}>
             <div className="thumb">
               <Image
@@ -78,8 +132,8 @@ export default function EventsPage() {
               </div>
               <p className="desc">{e.description}</p>
               <div className="cta">
-                <Link href={'/events/${e.id}'} className="btn">
-                  عرض التفاصيل
+                <Link href={'/${lang}/events/${e.id}'} className="btn">
+                  {t.btnDetails}
                 </Link>
               </div>
             </div>
@@ -92,9 +146,9 @@ export default function EventsPage() {
         <Image
           src={images[current]}
           alt="معرض الصور"
-          // width={100} 
+          width={1100}
           height={500}
-          style={{ borderRadius: "10px", objectFit: "cover" ,width : "100% !important"}}
+          style={{ borderRadius: "10px", objectFit: "cover" }}
         />
         <div className="dots">
           {images.map((_, i) => (
@@ -116,7 +170,7 @@ export default function EventsPage() {
           text-align: center;
           margin-bottom: 2rem;
           font-size: 2rem;
-          background-color: #ffe6f0; /* شريط وردي فاتح */
+          background-color: #f2f2f2; /* ✅ رمادي فاتح */
           padding: 1rem;
           border-radius: 8px;
         }
@@ -176,7 +230,7 @@ export default function EventsPage() {
         }
         .btn {
           display: inline-block;
-          background: #0059c8; /* زر باللون الأزرق */
+          background: #0059c8;
           color: #fff;
           text-decoration: none;
           padding: 0.5rem 1rem;
@@ -190,7 +244,7 @@ export default function EventsPage() {
           margin-top: 3rem;
           text-align: center;
           position: relative;
-          // max-width: 1100px; /* عرض المعرض */
+          max-width: 1100px;
           margin-inline: auto;
         }
         .dots {
@@ -216,7 +270,6 @@ export default function EventsPage() {
             grid-template-columns: 1fr;
           }
         }
-          
       `}</style>
     </section>
   );

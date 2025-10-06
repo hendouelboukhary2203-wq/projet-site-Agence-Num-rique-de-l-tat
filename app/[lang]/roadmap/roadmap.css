@@ -10,6 +10,7 @@
   margin-bottom: 2rem;
 }
 
+
 .projects-header h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -28,16 +29,16 @@
 }
 
 .project-card {
-  background-color: #cdedeb;
+  background-color: #fafbfb;
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   width: 300px;
 }
 
-.project-card.blue { background-color: #8fadea; }
-.project-card.green { background-color: #5f997e; }
-.project-card.purple { background-color: #cdbde6; }
+.project-card.blue { background-color: #fcfcfd; }
+.project-card.green { background-color: #fafbfb; }
+.project-card.purple { background-color: #fafafa; }
 
 .project-top {
   display: flex;
@@ -107,7 +108,7 @@
 }
 
 .goal-card {
-  background-color: #c4f4e7;
+  background-color: #fbfcfc;
   border-radius: 10px;
   padding: 1rem 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);

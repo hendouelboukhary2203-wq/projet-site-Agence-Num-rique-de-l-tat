@@ -2,7 +2,7 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: '',
+  // output: '',
   trailingSlash: true, // Nécessaire pour GitHub Pages
   images: {
     unoptimized: true, // Désactive l'optimisation automatique des images (obligatoire pour export statique)

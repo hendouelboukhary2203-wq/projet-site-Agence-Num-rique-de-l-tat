@@ -17,7 +17,7 @@ const translations = {
         date: "2024-03-15",
         description:
           "تم تنظيم فعالية إطلاق البوابة الوطنية التي تهدف إلى تسهيل الوصول إلى جميع الخدمات الحكومية الإلكترونية من خلال منصة موحدة ومتطورة.",
-        image: "./9.jpg",
+        image: "/9.jpg",
       },
       {
         id: 2,
@@ -26,7 +26,7 @@ const translations = {
         date: "2024-03-10",
         description:
           "نُظمت ورشة تدريبية شاملة لتطوير قدرات الموظفين في استخدام التقنيات الحديثة وأدوات التحول الرقمي.",
-        image: "./10.jpg",
+        image: "/10.jpg",
       },
       {
         id: 3,
@@ -35,7 +35,7 @@ const translations = {
         date: "2024-03-05",
         description:
           "تم توقيع اتفاقيات شراكة استراتيجية مع عدة جامعات وطنية لتطوير البرامج الأكاديمية المتخصصة في المجال الرقمي.",
-        image: "./11.jpg",
+        image: "/11.jpg",
       },
       {
         id: 4,
@@ -44,12 +44,12 @@ const translations = {
         date: "2024-02-28",
         description:
           "تم تقديم مشروع الهوية الرقمية الموحدة الذي سيسهل على المواطنين الوصول لجميع الخدمات الحكومية برقم موحد.",
-        image: "./12.jpg",
+        image: "/12.jpg",
       },
     ],
   },
   fr: {
-    title: "Événements de l’agence",
+    title: "Événements de l'agence",
     btnDetails: "Voir les détails",
     events: [
       {
@@ -58,7 +58,7 @@ const translations = {
         category: "Lancement",
         date: "2024-03-15",
         description:
-          "Événement de lancement du portail national visant à faciliter l’accès à tous les services publics numériques via une plateforme unifiée et moderne.",
+          "Événement de lancement du portail national visant à faciliter l'accès à tous les services publics numériques via une plateforme unifiée et moderne.",
         image: "/9.jpg",
       },
       {
@@ -67,7 +67,7 @@ const translations = {
         category: "Formation",
         date: "2024-03-10",
         description:
-          "Un atelier de formation complet a été organisé pour développer les compétences des employés dans l’utilisation des technologies modernes.",
+          "Un atelier de formation complet a été organisé pour développer les compétences des employés dans l'utilisation des technologies modernes.",
         image: "/10.jpg",
       },
       {
@@ -85,7 +85,7 @@ const translations = {
         category: "Projets",
         date: "2024-02-28",
         description:
-          "Présentation du projet d’identité numérique unifiée qui facilitera l’accès des citoyens à tous les services publics avec un identifiant unique.",
+          "Présentation du projet d'identité numérique unifiée qui facilitera l'accès des citoyens à tous les services publics avec un identifiant unique.",
         image: "/12.jpg",
       },
     ],
@@ -93,11 +93,11 @@ const translations = {
 };
 
 export default function EventsPage({ params }) {
-  const {lang} = use(params) ;
-  const currentLang=lang|| "ar" ;
+  const { lang } = use(params);
+  const currentLang = lang || "ar";
   const t = translations[currentLang];
 
-  const images = ["./17.jpg", "./16.jpg", "./13.jpg", "./14.jpg", "./15.jpg"];
+  const images = ["/17.jpg", "/16.jpg", "/13.jpg", "/14.jpg", "/15.jpg"];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -105,7 +105,7 @@ export default function EventsPage({ params }) {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="events">
@@ -132,7 +132,7 @@ export default function EventsPage({ params }) {
               </div>
               <p className="desc">{e.description}</p>
               <div className="cta">
-                <Link href={'/${lang}/events/${e.id}'} className="btn">
+                <Link href={`/${lang}/events/${e.id}`} className="btn">
                   {t.btnDetails}
                 </Link>
               </div>
@@ -143,24 +143,21 @@ export default function EventsPage({ params }) {
 
       {/* معرض الصور */}
       <div className="gallery">
-<<<<<<< HEAD:app/[lang]/events/page.js
-        <Image
-          src={images[current]}
-          alt="معرض الصور"
-          width={1100}
-          height={500}
-          style={{ borderRadius: "10px", objectFit: "cover" }}
-        />
-=======
-<div style={{ position: "relative", width: "100%", height: "500px", overflow: "hidden", borderRadius: "10px" }}>
-  <Image
-    src={images[current]}
-    alt="معرض الصور"
-    fill
-    style={{ objectFit: "cover", borderRadius: "10px" }}
-  />
-</div>
->>>>>>> 235cf2239c62ceedd4f8f6479d12bcd0d7924e79:app/events/page.js
+        <div style={{ 
+          position: "relative", 
+          width: "100%", 
+          height: "500px", 
+          overflow: "hidden", 
+          borderRadius: "10px" 
+        }}>
+          <Image
+            src={images[current]}
+            alt="معرض الصور"
+            fill
+            style={{ objectFit: "cover", borderRadius: "10px" }}
+            priority
+          />
+        </div>
         <div className="dots">
           {images.map((_, i) => (
             <span
@@ -181,11 +178,7 @@ export default function EventsPage({ params }) {
           text-align: center;
           margin-bottom: 2rem;
           font-size: 2rem;
-<<<<<<< HEAD:app/[lang]/events/page.js
-          background-color: #f2f2f2; /* ✅ رمادي فاتح */
-=======
-          background-color:#e6e6e6; /* شريط وردي فاتح */
->>>>>>> 235cf2239c62ceedd4f8f6479d12bcd0d7924e79:app/events/page.js
+          background-color: #e6e6e6;
           padding: 1rem;
           border-radius: 8px;
         }
@@ -275,6 +268,7 @@ export default function EventsPage({ params }) {
           height: 10px;
           border-radius: 50%;
           background: lightgray;
+          cursor: pointer;
         }
         .dot.active {
           background: blue;

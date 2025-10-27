@@ -11,7 +11,7 @@ const translations = {
     address: "📍 العنوان: 425C+672, Av. Moktar Ould Daddah",
     email: "📧 البريد الإلكتروني: contact@anetat.mr",
     phone: "📞 الهاتف: +222 45 25 xx xx",
-    hours: "🕒 ساعات العمل: الأحد - الخميس، 08:00 - 16:00",
+    hours: "🕒 الاثنين - الخميس 8h:00-17h:00 و الجمعة 8h:00-12h::ساعات العمل ",
     socialTitle: "تابعنا على وسائل التواصل الاجتماعي",
   },
   fr: {
@@ -21,7 +21,7 @@ const translations = {
     address: "📍 Adresse : 425C+672, Av. Moktar Ould Daddah",
     email: "📧 Email : contact@anetat.mr",
     phone: "📞 Téléphone : +222 45 25 xx xx",
-    hours: "🕒 Heures de travail : Dimanche - Jeudi, 08:00 - 16:00",
+    hours: "🕒 Heures de travail : Lundi - Jeudi 8h00-17h00 et vendredi 8h00-12h00",
     socialTitle: "Suivez-nous sur les réseaux sociaux",
   }
 };

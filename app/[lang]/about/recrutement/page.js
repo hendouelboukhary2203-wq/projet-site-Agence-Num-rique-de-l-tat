@@ -1,7 +1,12 @@
 'use client';
 import { use } from "react";
  import styles from "./jobs.module.css";
-
+export async function generateStaticParams() {
+  return [
+    { lang: 'fr' },
+    { lang: 'ar' }
+  ];
+}
 export default function JobsPage({ params }) {
   const lang = params.lang || "ar";
   const translations = {

@@ -1,6 +1,15 @@
+// app/[lang]/about/page.js
 'use client';
 
 import styles from "./recrutement/jobs.module.css";
+
+// ⚠️ ESSENTIEL pour l'export static - doit être dans le même fichier
+export async function generateStaticParams() {
+  return [
+    { lang: 'fr' },
+    { lang: 'ar' }
+  ];
+}
 
 export default function JobsPage({ params }) {
   const lang = params.lang || "ar";

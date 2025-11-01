@@ -1,5 +1,5 @@
 // app/[lang]/about/page.js
-'use client';
+//'use client';
 
 import styles from "./recrutement/jobs.module.css";
 

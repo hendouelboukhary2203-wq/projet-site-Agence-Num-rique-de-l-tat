@@ -1,4 +1,4 @@
-'use client';
+//'use client';
 import { FaCar, FaEye } from 'react-icons/fa';
 import './projects.css';
 import { use } from 'react';
@@ -217,7 +217,12 @@ const translations = {
     ]
   }
 };
-
+export async function generateStaticParams() {
+  return [
+    { lang: 'fr' },
+    { lang: 'ar' }
+  ];
+}
 export default function ProjectsPage({ params }) {
   const {lang} = use(params);
   const currentLang=lang|| "ar";

@@ -1,4 +1,4 @@
-'use client';
+//'use client';
 import { use } from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "./contact.css";
@@ -25,6 +25,13 @@ const translations = {
     socialTitle: "Suivez-nous sur les réseaux sociaux",
   }
 };
+
+export async function generateStaticParams() {
+  return [
+    { lang: 'fr' },
+    { lang: 'ar' }
+  ];
+}
 
 export default function ContactPage({ params }) {
   const {lang} = use(params) ;

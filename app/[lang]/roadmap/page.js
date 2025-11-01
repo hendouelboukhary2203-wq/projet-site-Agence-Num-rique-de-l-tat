@@ -1,4 +1,4 @@
-'use client';
+//'use client';
 import './roadmap.css';
 import { use } from "react";
 
@@ -130,7 +130,12 @@ const translations = {
     ]
   }
 };
-
+export async function generateStaticParams() {
+  return [
+    { lang: 'fr' },
+    { lang: 'ar' }
+  ];
+}
 export default function ProjectsPage({ params }) {
   const resolvedParams = use(params); // لفك الـ Promise في Next.js 14+
   const lang = resolvedParams.lang || "fr";

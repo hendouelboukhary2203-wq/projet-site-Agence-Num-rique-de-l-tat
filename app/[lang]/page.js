@@ -1,9 +1,18 @@
-"use client";
+//"use client";
 import { use } from "react";  
 
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+
+
+export async function generateStaticParams() {
+  return [
+    { lang: 'fr' },
+    { lang: 'ar' }
+  ];
+}
+
 
 const translations = {
   ar: {

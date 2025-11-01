@@ -1,8 +1,15 @@
-"use client";
+//"use client";
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+
+export async function generateStaticParams() {
+  return [
+    { lang: 'fr' },
+    { lang: 'ar' }
+  ];
+}
 export default function Home() {
   const [currentImage, setCurrentImage] = useState("./1.jpg");
 

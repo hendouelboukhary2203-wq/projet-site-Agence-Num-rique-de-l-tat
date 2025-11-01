@@ -75,7 +75,7 @@ export default function HomePage({ params }) {
   const currentLang=lang|| "ar" ;
   const t = translations[currentLang];
 
-  const [currentImage, setCurrentImage] = useState("/1.jpg");
+  const [currentImage, setCurrentImage] = useState("./1.jpg");
 
   useEffect(() => {
     const interval = setInterval(() => {

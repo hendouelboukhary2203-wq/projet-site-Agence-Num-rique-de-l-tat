@@ -1,6 +1,7 @@
 // app/[lang]/about/page.js
 'use client';
 
+import { useState } from "react";
 import styles from "./recrutement/jobs.module.css";
 
 // ⚠️ ESSENTIEL pour l'export static - doit être dans le même fichier

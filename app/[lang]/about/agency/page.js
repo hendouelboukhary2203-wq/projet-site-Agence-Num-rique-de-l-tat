@@ -64,9 +64,15 @@ const translations = {
       "Élargissement des activités et lancement de grands projets dans divers secteurs",
   },
 };
+export async function generateStaticParams() {
+  return [
+    { lang: 'fr' },
+    { lang: 'ar' }
+  ];
+}
 
 export default function AboutPage({ params }) {
-  const lang = params.lang || "ar"; // اللغة من المسار
+  const lang = params.lang || "ar";
   const t = translations[lang]; // اختيار الترجمة
 
   return (

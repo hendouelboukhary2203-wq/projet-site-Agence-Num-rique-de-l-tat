@@ -1,12 +1,5 @@
-import HomeClient from './HomeClient';
+import { redirect } from 'next/navigation';
 
-export async function generateStaticParams() {
-  return [
-    { lang: 'fr' },
-    { lang: 'ar' }
-  ];
-}
-
-export default function HomePage({ params }) {
-  return <HomeClient params={params} />;
+export default function RootPage() {
+  redirect('/ar'); // Redirige vers l'arabe par défaut
 }

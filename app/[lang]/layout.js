@@ -48,7 +48,7 @@ export default function RootLayout({ children, params }) {
             {/* اليسار: شعار + روابط */}
             <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
               <Link href={'/${lang}'} style={{ display: "flex", alignItems: "center", textDecoration: "none", color: "inherit" }}>
-                <Image src="./4.jpg" alt="شعار الوكالة" width={40} height={40} style={{ objectFit: "cover", borderRadius: 6 }} />
+                <Image src="/4.jpg" alt="شعار الوكالة" width={40} height={40} style={{ objectFit: "cover", borderRadius: 6 }} />
               </Link>
               <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
                 <Link href={`/${lang}`}>{t.nav[0]}</Link>

@@ -62,7 +62,7 @@ export default function RootLayout({ children, params }) {
             </div>
             {/* اليمين: زر اللغة */}
             <div style={{ display: "flex", alignItems: "center" }}>
-              <LanguageSwitcher currentLang={params.lang} />
+              <LanguageSwitcher currentLang={'fr'} />
             </div>
           </div>
         </nav>

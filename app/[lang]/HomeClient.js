@@ -24,17 +24,17 @@ const translations = {
     newsTitle: "آخر الأخبار",
     newsCards: [
       {
-        img: "./8.jpg",
+        img: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/8.jpg",
         title: "ورشات تدريبية للموظفين",
         desc: "تنظيم ورشات تدريبية لرفع الكفاءات الرقمية لدى موظفي الإدارات الحكومية."
       },
       {
-        img: "./7.jpg",
+        img: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/7.jpg",
         title: "شراكة مع وزارات الدولة",
         desc: "وقعت الوكالة الرقمية اتفاقيات تعاون مع عدة وزارات لتعزيز التحول الرقمي."
       },
       {
-        img: "./6.jpg",
+        img: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/6.jpg",
         title: "إطلاق منصة حكومية جديدة",
         desc: "تم إطلاق منصة حكومية جديدة لتسهيل الوصول إلى الخدمات الرقمية للمواطنين."
       }
@@ -55,17 +55,17 @@ Nous mettons en œuvre une stratégie globale de transformation numérique couvr
     newsTitle: "Dernières nouvelles",
     newsCards: [
       {
-        img: "./8.jpg",
+        img: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/8.jpg",
         title: "Ateliers de formation pour le personnel",
         desc: "Organisation d'ateliers pour améliorer les compétences numériques des employés gouvernementaux."
       },
       {
-        img: "./7.jpg",
+        img: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/7.jpg",
         title: "Partenariat avec les ministères",
         desc: "L'Agence Numérique a signé des accords de coopération avec plusieurs ministères pour renforcer la transformation numérique."
       },
       {
-        img: "./6.jpg",
+        img: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/6.jpg",
         title: "Lancement d'une nouvelle plateforme gouvernementale",
         desc: "Une nouvelle plateforme gouvernementale a été lancée pour faciliter l'accès aux services numériques pour les citoyens."
       }
@@ -85,7 +85,7 @@ const [lang, setLang] = useState(params.lang || "ar");
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) =>
-        prevImage === "./2.jpg" ? "./1.jpg" : "./2.jpg"
+        prevImage === "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/2.jpg" ? "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/1.jpg" : "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/2.jpg"
       );
     }, 3000);
     return () => clearInterval(interval);
@@ -144,7 +144,7 @@ const [lang, setLang] = useState(params.lang || "ar");
           flexWrap: "wrap",
         }}>
           <img
-            src="./5.jpg"
+            src="https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/5.jpg"
             alt=""
             width="400"
             height="300"

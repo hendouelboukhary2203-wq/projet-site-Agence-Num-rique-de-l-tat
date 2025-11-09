@@ -138,7 +138,7 @@ const [lang, setLang] = useState(params.lang || "ar");
                   {t.btnDetails}
                 </Link>
               </div>
-            </div>
+            </div>    
           </article>
         ))}
       </div>

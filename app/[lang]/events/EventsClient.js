@@ -17,7 +17,7 @@ const translations = {
         date: "2024-03-15",
         description:
           "تم تنظيم فعالية إطلاق البوابة الوطنية التي تهدف إلى تسهيل الوصول إلى جميع الخدمات الحكومية الإلكترونية من خلال منصة موحدة ومتطورة.",
-        image: "./9.jpg",
+        image: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/9.jpg",
       },
       {
         id: 2,
@@ -26,7 +26,7 @@ const translations = {
         date: "2024-03-10",
         description:
           "نُظمت ورشة تدريبية شاملة لتطوير قدرات الموظفين في استخدام التقنيات الحديثة وأدوات التحول الرقمي.",
-        image: "./10.jpg",
+        image: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/10.jpg",
       },
       {
         id: 3,
@@ -35,7 +35,7 @@ const translations = {
         date: "2024-03-05",
         description:
           "تم توقيع اتفاقيات شراكة استراتيجية مع عدة جامعات وطنية لتطوير البرامج الأكاديمية المتخصصة في المجال الرقمي.",
-        image: "./11.jpg",
+        image: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/11.jpg",
       },
       {
         id: 4,
@@ -44,7 +44,7 @@ const translations = {
         date: "2024-02-28",
         description:
           "تم تقديم مشروع الهوية الرقمية الموحدة الذي سيسهل على المواطنين الوصول لجميع الخدمات الحكومية برقم موحد.",
-        image: "./12.jpg",
+        image: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/12.jpg",
       },
     ],
   },
@@ -59,7 +59,7 @@ const translations = {
         date: "2024-03-15",
         description:
           "Événement de lancement du portail national visant à faciliter l'accès à tous les services publics numériques via une plateforme unifiée et moderne.",
-        image: "./9.jpg",
+        image: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/9.jpg",
       },
       {
         id: 2,
@@ -68,7 +68,7 @@ const translations = {
         date: "2024-03-10",
         description:
           "Un atelier de formation complet a été organisé pour développer les compétences des employés dans l'utilisation des technologies modernes.",
-        image: "./10.jpg",
+        image: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/10.jpg",
       },
       {
         id: 3,
@@ -77,7 +77,7 @@ const translations = {
         date: "2024-03-05",
         description:
           "Des accords stratégiques ont été signés avec plusieurs universités nationales pour développer des programmes académiques spécialisés dans le domaine numérique.",
-        image: "./11.jpg",
+        image: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/11.jpg",
       },
       {
         id: 4,
@@ -86,7 +86,7 @@ const translations = {
         date: "2024-02-28",
         description:
           "Présentation du projet d'identité numérique unifiée qui facilitera l'accès des citoyens à tous les services publics avec un identifiant unique.",
-        image: "./12.jpg",
+        image: "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/12.jpg",
       },
     ],
   },
@@ -99,7 +99,7 @@ const [lang, setLang] = useState(params.lang || "ar");
   const currentLang = lang || "ar";
   const t = translations[currentLang];
 
-  const images = ["./17.jpg", "./16.jpg", "./13.jpg", "./14.jpg", "./15.jpg"];
+  const images = ["https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/17.jpg", "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/16.jpg", "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/13.jpg", "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/14.jpg", "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/15.jpg"];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {

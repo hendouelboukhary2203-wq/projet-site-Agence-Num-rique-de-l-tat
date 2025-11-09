@@ -8,7 +8,7 @@
 //   return [
 //     { lang: 'fr' },
 //     { lang: 'ar' }
-//   ];
+//   ];   
 // }
 // export default function Home() {
 //   const [currentImage, setCurrentImage] = useState("./1.jpg");
@@ -91,7 +91,7 @@
 //   >
 //     {/* الصورة */}
 //     <img
-//       src="./5.jpg"
+//       src="https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/5.jpg"
 //       alt=""
 //       width="400"
 //       height="300"
@@ -199,7 +199,7 @@
 //         boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
 //       }}
 //     >
-//       <img src="./8.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+//       <img src="https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/8.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
 //       <div style={{ padding: "1rem" }}>
 //         <h3 style={{ margin: "0 0 0.5rem 0" }}>ورشات تدريبية للموظفين</h3>
 //         <p style={{ margin: 0, color: "#555" }}>
@@ -218,7 +218,7 @@
 //         boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
 //       }}
 //     >
-//       <img src="./7.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+//       <img src="https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/7.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
 //       <div style={{ padding: "1rem" }}>
 //         <h3 style={{ margin: "0 0 0.5rem 0" }}>شراكة مع وزارات الدولة</h3>
 //         <p style={{ margin: 0, color: "#555" }}>
@@ -237,7 +237,7 @@
 //         boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
 //       }}
 //     >
-//       <img src="./6.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+//       <img src="https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/6.jpg" alt="" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
 //       <div style={{ padding: "1rem" }}>
 //         <h3 style={{ margin: "0 0 0.5rem 0" }}>إطلاق منصة حكومية جديدة</h3>
 //         <p style={{ margin: 0, color: "#555" }}>
@@ -247,7 +247,7 @@
 //     </div>
 //   </div>
 // </div>      
-//     </>
+//      </>
 //   );
 // }
 import { redirect } from 'next/navigation';

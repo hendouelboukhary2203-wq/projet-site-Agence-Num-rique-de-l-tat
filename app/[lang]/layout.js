@@ -75,7 +75,7 @@ export default function RootLayout({ children, params }) {
           <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}>
             {/* الوكالة */}
             <div style={{ flex: "1", minWidth: "200px", marginBottom: "1rem" }}>
-              <Image src="./4.jpg" alt="Logo Agence Numérique" width={45} height={45} />
+              <Image src="https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/4.jpg" alt="Logo Agence Numérique" width={45} height={45} />
               <h3 style={{ color: "white" }}>{t.footer.agenceTitle}</h3>
               <p style={{ color: "white" }}>{t.footer.agenceDesc1}</p>
               <p style={{ color: "white" }}>{t.footer.agenceDesc2}</p>

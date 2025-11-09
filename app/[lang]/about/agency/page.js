@@ -70,9 +70,8 @@ export async function generateStaticParams() {
     { lang: 'ar' }
   ];
 }
-
 export default function AboutPage({ params }) {
-  const lang = params.lang || "ar";
+  const lang = params.lang || "ar"; // اللغة من المسار
   const t = translations[lang]; // اختيار الترجمة
 
   return (
@@ -87,7 +86,7 @@ export default function AboutPage({ params }) {
         }}
       >
         <Image
-          src="./3.jpg"
+          src="https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/3.jpg"
           alt={t.mainTitle}
           width={900}
           height={500}
@@ -241,7 +240,7 @@ export default function AboutPage({ params }) {
             textAlign: "center",
             flex: "1",
             minWidth: "120px",
-          }}
+          }}   
         >
           <h2 style={{ color: "#2980b9", margin: 0 }}>{t.history3Title}</h2>
           <p style={{ margin: 0 }}>{t.history3Text}</p>

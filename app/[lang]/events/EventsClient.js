@@ -94,9 +94,9 @@ const translations = {
 
 
 export default function EventsClient({ params }) {
-const [lang, setLang] = useState(params.lang || "ar");
+const [lang, setLang] = useState(params.lang || "fr");
 
-  const currentLang = lang || "ar";
+  const currentLang = lang || "fr";
   const t = translations[currentLang];
 
   const images = ["https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/17.jpg", "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/16.jpg", "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/13.jpg", "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/14.jpg", "https://hendouelboukhary2203-wq.github.io/projet-site-Agence-Num-rique-de-l-tat/15.jpg"];

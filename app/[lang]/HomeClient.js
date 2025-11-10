@@ -75,7 +75,7 @@ Nous mettons en œuvre une stratégie globale de transformation numérique couvr
 
 export default function HomeClient({ params }) {
 
-const [lang, setLang] = useState(params.lang || "ar");
+  const {lang} = use(params) ;
 //   const {lang} = use (params) ;
   const currentLang=lang|| "ar" ;
   const t = translations[currentLang];
